@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Box, Text, VStack, Container, Flex, useColorModeValue, Button, Stack, Heading, Divider, ButtonGroup, Image, Spacer } from '@chakra-ui/react';
+import { Box, Text, VStack, Container, Flex, useColorModeValue, Icon, Stack, Heading, Divider, ButtonGroup, Image, Spacer, HStack } from '@chakra-ui/react';
 import { Card, CardBody, CardFooter } from '@chakra-ui/react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import {CalendarIcon} from '@chakra-ui/icons';
 
 const MotionBox = motion(Box);
 
@@ -49,7 +50,7 @@ const AboutPage = () => {
   const textColor = useColorModeValue('gray.800', 'gray.100');
 
   return (
-    <Box bg={bgColor} color={textColor} fontFamily="body"> {/* 테마의 글로벌 폰트 사용 */}
+    <Box bg='white' color={textColor} fontFamily="body"> {/* 테마의 글로벌 폰트 사용 */}
       <VStack spacing={0} align="stretch">
         {/* Hero Section */}
         <Box h="100vh" position="relative" overflow="hidden"> {/* 테마의 brand.50 사용 */}
@@ -65,104 +66,56 @@ const AboutPage = () => {
         <AnimatedSection>
           <Flex direction={{ base: 'column', md: 'row' }} align="center">
             <Box flex={1} h="100vh">
-              <Box mb={20}>
-                <GradientText mb={10}>업무는 언제 어디서나, 더 효율적으로. 스마트워크와 함께</GradientText>
+              <Box mb={32}>
+                <GradientText mb={10}>업무는 언제 어디서나, 더 효율적으로. 스마트워크와 함께.</GradientText>
               </Box>
               <Flex align="center">
-              <Card maxW='sm' borderRadius='20'>
+              <Card maxW='sm' borderRadius='20' height='60vh' bg='#DFF6FF'>
                 <CardBody>
                   <Image
-                    src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+                    src='everywhere.png'
                     alt='Green double couch with wooden legs'
                     borderRadius='lg'
                   />
                   <Stack mt='6' spacing='3'>
-                    <Heading size='md'>Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque inspired
-                      spaces, earthy toned spaces and for people who love a chic design with a
-                      sprinkle of vintage design.
-                    </Text>
-                    <Text color='blue.600' fontSize='2xl'>
-                      $450
-                    </Text>
+                    <Heading size='xl'>Everywhere</Heading>
+                    <Text fontSize='lg'>
+                      모든곳에서 업무를 진행하세요.
+                    </Text>                    
                   </Stack>
                 </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing='2'>
-                    <Button variant='solid' colorScheme='blue'>
-                      Buy now
-                    </Button>
-                    <Button variant='ghost' colorScheme='blue'>
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
               </Card>
               <Spacer />
-              <Card maxW='sm' borderRadius='20'>
+              <Card maxW='sm' borderRadius='20' height='60vh' bg='brand.50'>
                 <CardBody>
                   <Image
-                    src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+                    src='efficiently.png'
                     alt='Green double couch with wooden legs'
                     borderRadius='lg'
                   />
                   <Stack mt='6' spacing='3'>
-                    <Heading size='md'>Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque inspired
-                      spaces, earthy toned spaces and for people who love a chic design with a
-                      sprinkle of vintage design.
-                    </Text>
-                    <Text color='blue.600' fontSize='2xl'>
-                      $450
-                    </Text>
+                    <Heading size='xl'>Efficiently</Heading>
+                    <Text fontSize='lg'>
+                      더 효율적으로 업무를 진행하세요.
+                    </Text>                    
                   </Stack>
                 </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing='2'>
-                    <Button variant='solid' colorScheme='blue'>
-                      Buy now
-                    </Button>
-                    <Button variant='ghost' colorScheme='blue'>
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
               </Card>
               <Spacer />
-              <Card maxW='sm' borderRadius='20'>
+              <Card maxW='sm' borderRadius='20' height='60vh' bg='#F5F5F5'>
                 <CardBody>
                   <Image
-                    src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+                    src='besmart.png'
                     alt='Green double couch with wooden legs'
                     borderRadius='lg'
                   />
                   <Stack mt='6' spacing='3'>
-                    <Heading size='md'>Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque inspired
-                      spaces, earthy toned spaces and for people who love a chic design with a
-                      sprinkle of vintage design.
-                    </Text>
-                    <Text color='blue.600' fontSize='2xl'>
-                      $450
-                    </Text>
+                    <Heading size='xl'>Be Smart</Heading>
+                    <Text fontSize='lg'>
+                      여러 스마트툴을 이용해 업무를 진행하세요.
+                    </Text>                    
                   </Stack>
                 </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing='2'>
-                    <Button variant='solid' colorScheme='blue'>
-                      Buy now
-                    </Button>
-                    <Button variant='ghost' colorScheme='blue'>
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
               </Card>
               </Flex>
             </Box>
@@ -171,11 +124,42 @@ const AboutPage = () => {
 
         {/* 비전/미션 Section */}
         <AnimatedSection> {/* 테마의 brand.100 사용 */}
-          <Box flex={1}>
-            <GradientText mb={4}>생성형 AI</GradientText>
-            <Text fontSize="xl" mb={4}>
-              Changing Your Life with AI
-            </Text>
+          <Box flex={1} h="100vh">
+            <GradientText mb={4}>생성형 AI, 당신의 퇴근시간에 날개를.</GradientText>
+            <Box bg="#F5F5F7" borderRadius="3xl" height="60vh" mt="32" maxW='100%'>              
+              <Flex justify="center" align="center" height="100%" p='10'>
+                <HStack spacing={7}>
+                <Image
+                  src="openai.svg"
+                  alt="OpenAI Logo"
+                  boxSize="100px"
+                  mx={2}
+                />
+                <Image
+                  src="midjourney.svg"
+                  alt="Midjourney Logo"
+                  boxSize="100px"
+                  mx={2}
+                />
+                <Image
+                  src="perplexity-color.svg"
+                  alt="Perplexity Logo"
+                  boxSize="100px"
+                  mx={2}
+                />
+                <Image
+                  src="claude-color.svg"
+                  alt="claude Logo"
+                  boxSize="100px"
+                  mx={2}
+                />
+                <Text fontSize='7xl'> + </Text>
+                  <Text fontSize='7xl'> 📑 </Text>
+                  <Text fontSize='7xl'> = </Text>
+                  <Text fontSize='7xl'> ⏰ 🪽</Text>
+                </HStack>                
+              </Flex>
+            </Box>
           </Box>
         </AnimatedSection>
       </VStack>

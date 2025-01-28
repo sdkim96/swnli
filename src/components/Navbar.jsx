@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Box, Flex, HStack, Link, Image, Button } from '@chakra-ui/react';
@@ -12,13 +11,13 @@ function Navbar() {
       <Flex
         maxW="80%"
         mx="auto"
-        height='8vh'
+        height="10vh"
         px={4}
         py={3}
         alignItems="center"
         justifyContent="space-between"
+        borderBottom="1px solid black"
       >
-        
         <HStack spacing={10}>
           <RouterLink to="/">
             <Image
