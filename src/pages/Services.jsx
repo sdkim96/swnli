@@ -1,46 +1,132 @@
-// src/pages/Services.jsx
 import React from 'react';
-import { Box, Heading, Text, VStack, Divider } from '@chakra-ui/react';
+import {
+  Box, 
+  Heading, 
+  Text, 
+  VStack, 
+  Divider,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  HStack,
+  Spacer,
+  Image,
+  List,
+  ListItem,
+  ListIcon,
+} from '@chakra-ui/react'
+import { MdCheckCircle, MdSettings } from 'react-icons/md';
 
 function Services() {
   return (
-    <Box maxW="1200px" mx="auto" py={10} px={4}>
-      <Heading size="lg" mb={6}>
-        서비스 (Services)
-      </Heading>
+    <Box maxW="1200px" mx="auto" py={20} px={4}>
+      <Box height='100vh'>
+        <Heading size="2xl" mb={20}>
+          교육 서비스
+        </Heading>
+        <Box bg="#F5F5F7" borderRadius="3xl" height="auto" maxW="100%" p="20">
+          <HStack spacing={4} mb={8}>
+          <Accordion allowToggle mb={8} w='100%'>
+            {/* Beginner Section */}
+            <AccordionItem>
+              <AccordionButton>
+                <Text flex="1" textAlign="left" fontSize="2xl" fontWeight="bold" py={4}>
+                  Beginner
+                </Text>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+                <VStack align="start" spacing={6}>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    디지털 기초 역량이 부족한 초급자 등을 위한 교육.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    스마트폰 및 컴퓨터 기초 활용 능력 달성목표.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    이메일 계정 생성 및 관리능력 향상.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    회사 홍보전략 및 디지털 마케팅 기초.
+                  </Text>
+                </VStack>
+              </AccordionPanel>
+            </AccordionItem>
 
-      {/* 1. 교육 프로그램 */}
-      <VStack align="start" spacing={2} mb={8}>
-        <Heading size="md">[교육 프로그램]</Heading>
-        <Text>
-          - 기초·중급·고급 세분화: 컴퓨터 기본, 노션/원노트 협업 도구, 생성형 AI(ChatGPT 등) 활용
-        </Text>
-        <Text>
-          - Google Workspace (Gmail, Drive, Docs/Sheets, Calendar 등) 계정 동기화 & 설정
-        </Text>
-        <Text>
-          - Notion, Evernote, OneNote로 디지털 노트 및 데이터 관리
-        </Text>
-        <Text>
-          - 생성형 AI 이해 & 활용 (ChatGPT, Claude 등) / GPT 기반 이미지·영상·데이터 처리
-        </Text>
-        <Text>
-          - 워크샵·OJT 형태의 실습 프로젝트 진행
-        </Text>
-      </VStack>
-      <Divider />
+            {/* Intermediate Section */}
+            <AccordionItem>
+              <AccordionButton>
+                <Text flex="1" textAlign="left" fontSize="2xl" fontWeight="bold" py={4}>
+                  Intermediate
+                </Text>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+              <VStack align="start" spacing={6}>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    디지털 기초가 이미 어느 정도 있는 학습자.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    노션, 원노트 등 업무 협업도구 심화 학습.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    엑셀 및 구글 스프레드시트를 통한 데이터 분석능력 기초.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    문서 간 연동 및 간단한 자동화 툴 기초.
+                  </Text>
+                </VStack>
+              </AccordionPanel>
+            </AccordionItem>
 
+            {/* Advanced Section */}
+            <AccordionItem>
+              <AccordionButton>
+                <Text flex="1" textAlign="left" fontSize="2xl" fontWeight="bold" py={4}>
+                  Advanced
+                </Text>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+              <VStack align="start" spacing={6}>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    AI 활용에 관심이 많은 기업 임직원, 경영진, 프로젝트 매니저 등.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    생성형 AI 이해와 적용 및 업무 활용방안 학습.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                  국내외 AI 프로젝트 성공·실패 사례 리뷰 및 기업 규모별(AI 스타트업, 중소·중견, 대기업) 맞춤 적용 전략.
+                  </Text>
+                  <Text flex="1" textAlign="left" fontSize="xl" fontWeight="bold">
+                    집중 세미나 + 실습을 통한 실제 모델을 적용해봄(프롬프트 설계, 응답 최적화 기법 등).
+                  </Text>
+                </VStack>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          <Spacer />
+          <Image src='service-1.png' alt='Green double couch with wooden legs' boxSize="500px" borderRadius='lg'/>
+          </HStack>
+        </Box>  
+      </Box>
+      
       {/* 2. 컨설팅 서비스 */}
-      <VStack align="start" spacing={2} my={8}>
-        <Heading size="md">[컨설팅 서비스]</Heading>
-        <Text>
-          - 스마트워크 도입 & 교육 컨설팅: 기업 맞춤형 스마트워크 설계, AI 태생계 이해 & 업무 프로세스 개선  
-          - 신입 직원 OJT 프로그램: 산업단지 내 기업 맞춤형 실무 교육 & 역량 강화  
-          - AI를 통한 영상·이미지 콘텐츠 제작 컨설팅: Runway Gen-3, ElevenLabs 등 도구 활용  
-          - 기업문화 정착 지원: AI + 스마트워크 조합으로 창의적인 업무문화 정착
-        </Text>
-      </VStack>
-      <Divider />
+      <Box height='100vh'>
+        <Heading size="2xl" mb={20}>
+          컨설팅 서비스
+        </Heading>
+        <VStack align="start" spacing={2} my={8}>
+          <Text>
+            - 스마트워크 도입 & 교육 컨설팅: 기업 맞춤형 스마트워크 설계, AI 태생계 이해 & 업무 프로세스 개선  
+            - 신입 직원 OJT 프로그램: 산업단지 내 기업 맞춤형 실무 교육 & 역량 강화  
+            - AI를 통한 영상·이미지 콘텐츠 제작 컨설팅: Runway Gen-3, ElevenLabs 등 도구 활용  
+            - 기업문화 정착 지원: AI + 스마트워크 조합으로 창의적인 업무문화 정착
+          </Text>
+        </VStack>
+      </Box>
 
       {/* 3. 스마트워크 플랫폼 */}
       <VStack align="start" spacing={2} my={8}>
