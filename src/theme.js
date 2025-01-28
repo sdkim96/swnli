@@ -1,4 +1,3 @@
-// src/theme.js
 import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
@@ -19,6 +18,14 @@ const theme = extendTheme({
   fonts: {
     heading: `'Noto Sans KR', sans-serif`,
     body: `'Noto Sans KR', sans-serif`,
+  },
+  components: {
+    Box: {
+      baseStyle: {
+        width: '80%', // 폭 고정
+        marginX: 'auto', // 좌우 중앙 정렬
+      },
+    },
   },
 });
 

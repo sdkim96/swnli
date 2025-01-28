@@ -10,31 +10,25 @@ function Navbar() {
   return (
     <Box as="header" bg="white" boxShadow="sm">
       <Flex
-        maxW="1200px"
+        maxW="80%"
         mx="auto"
+        height='8vh'
         px={4}
         py={3}
         alignItems="center"
         justifyContent="space-between"
       >
-        {/* 로고 + 회사명(임시) */}
-        <HStack spacing={3}>
-          <Image src={LOGO_URL} alt="SWNLI logo" boxSize="32px" />
-          <Link
-            as={RouterLink}
-            to="/"
-            fontWeight="bold"
-            fontSize="lg"
-            _hover={{ textDecoration: 'none' }}
-          >
-            (주)스마트워크앤라이프이노베이션
-          </Link>
-        </HStack>
-
-        {/* 메뉴 */}
-        <HStack spacing={4}>
+        
+        <HStack spacing={10}>
+          <RouterLink to="/">
+            <Image
+              src={LOGO_URL}
+              alt="SWNLI logo"
+              boxSize="32px"
+            />
+          </RouterLink>
           <Link as={RouterLink} to="/about">
-            회사소개
+            소개
           </Link>
           <Link as={RouterLink} to="/services">
             서비스
@@ -48,6 +42,8 @@ function Navbar() {
           <Link as={RouterLink} to="/contact">
             문의
           </Link>
+        </HStack>
+        <HStack spacing={4}>
           <Button colorScheme="brand" size="sm" as={RouterLink} to="/services">
             교육 살펴보기
           </Button>
