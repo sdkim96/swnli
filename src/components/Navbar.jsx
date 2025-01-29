@@ -7,7 +7,7 @@ const LOGO_URL =
 
 function Navbar() {
   return (
-    <Box as="header" bg="white" boxShadow="sm">
+    <Box as="header" bg="#F5F5F7">
       <Flex
         maxW="80%"
         mx="auto"
@@ -16,7 +16,7 @@ function Navbar() {
         py={3}
         alignItems="center"
         justifyContent="space-between"
-        borderBottom="1px solid black"
+
       >
         <HStack spacing={10}>
           <RouterLink to="/">

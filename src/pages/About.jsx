@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import { Box, Text, VStack, Container, Flex, useColorModeValue, Icon, Stack, Heading, Divider, ButtonGroup, Image, Spacer, HStack } from '@chakra-ui/react';
-import { Card, CardBody, CardFooter } from '@chakra-ui/react';
+import { Box, Text, VStack, Container, Flex, useColorModeValue, Stack, Heading, Image, Spacer, HStack } from '@chakra-ui/react';
+import { Card, CardBody } from '@chakra-ui/react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import {CalendarIcon} from '@chakra-ui/icons';
 
 const MotionBox = motion(Box);
 
